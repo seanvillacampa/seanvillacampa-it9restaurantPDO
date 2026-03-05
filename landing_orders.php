@@ -107,7 +107,7 @@ if (isset($_GET['edit'])) {
 
       <?php foreach ($orders_name as $orders_name): ?>
         <option value="<?= $orders_name['customer_id']; ?>">
-            <?= $orders_name['first_name']; ?>
+            <?= $orders_name['full_name']; ?>
         </option>
     <?php endforeach; ?>
 
