@@ -11,7 +11,8 @@ $stmt3 = $pdo->query("SELECT
     CONCAT(first_name, ' ', last_name) AS full_name,
     CONCAT(dish_name, ' (x', quantity, ') ') AS dish_quantity,
     menuitems.price,
-    (menuitems.price * orders.quantity) AS total_price,
+    CONCAT('₱', menuitems.price * orders.quantity) AS total_price,
+
     orders.order_date,
     orders.order_id
 FROM orders
